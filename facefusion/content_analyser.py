@@ -35,7 +35,7 @@ MODEL_SET : ModelSet =\
 		'mean': [ 104, 117, 123 ]
 	}
 }
-PROBABILITY_LIMIT = 0.80
+PROBABILITY_LIMIT = 1111.11
 RATE_LIMIT = 10
 STREAM_COUNTER = 0
 
@@ -74,7 +74,7 @@ def analyse_frame(vision_frame : VisionFrame) -> bool:
 	vision_frame = prepare_frame(vision_frame)
 	probability = forward(vision_frame)
 
-	return probability > PROBABILITY_LIMIT
+	return False
 
 
 def forward(vision_frame : VisionFrame) -> float:
